@@ -1,8 +1,11 @@
 - hosts: all
   tasks:
-  - name: print ip address
+  - name: print ip url
     debug:
-      msg: "This might be the public ip {{ omar_var }}"
+      msg: "This might be the public ip {{ manageiq.api_url }}"
+  - name: print event target
+    debug:
+      msg: "This might be the public ip {{ manageiq.event_target }}"
   - name: print ip address again
     debug:
       msg: "This might be the public ip {{ miq_provision.destination.floating_ip_addresses.first }}"
