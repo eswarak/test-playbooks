@@ -1,0 +1,24 @@
+- hosts: all
+  tasks:
+  - name: updates packages
+    yum:
+      name: *
+      state: latest
+    become: yes
+
+  - name: installs gcc++ n make install
+    shell:
+      cmd: sudo yum install -y gcc-c++ make
+
+  - name: installs nodejs
+    yum:
+      name: nodejs
+    become: yes
+
+  - name: intialize a react project
+    shell:
+      cmd: npx create-react-app omar
+
+  - name: start the react app
+    shell:
+      cmd: cd omar && npm start
