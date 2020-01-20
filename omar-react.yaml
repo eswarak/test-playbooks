@@ -9,6 +9,10 @@
   - name: installs gcc++ n make install
     shell:
       cmd: sudo yum install -y gcc-c++ make
+      
+  - name: get the nodejs repo
+    shell:
+      cmd: curl -sL https://rpm.nodesource.com/setup_12.x | sudo -E bash -
 
   - name: installs nodejs
     yum:
