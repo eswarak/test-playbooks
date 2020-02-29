@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+  - name: print ip url
+    debug:
+      msg: "This might be the value of omar variable {{ omar }}"
+      
