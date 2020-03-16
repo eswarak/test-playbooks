@@ -3,4 +3,6 @@
   - name: print ip url
     debug:
       msg: "This might be the value of omar variable {{ omar }}"
-      
+  - name: print name of vm
+    debug:
+      msg: "This might be the value of omar variable {{ vmname }}"
