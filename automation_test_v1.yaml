@@ -11,5 +11,4 @@
     register: vm_name
   - name: print the vm name
     debug:
-      msg: "This is the vm name {{ vm_name }}
-
+      msg: "This is the vm name {{ vm_name }}"
