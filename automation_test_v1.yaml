@@ -1,8 +1,15 @@
 - hosts: all
   tasks:
-  - name: print ip url
+  - name: Get the existing vm name
+    uri:
+      url: "{{ manageiq.api_url }}/api/vms/{{ vmid }}"
+      method: GET
+      validate_certs: no
+      headers:
+        X-Auth-Token: "{{ manageiq.api_token }}"
+      body_format: json
+    register: vm_name
+  - name: print the vm name
     debug:
-      msg: "This might be the value of omar variable {{ omar }}"
-  - name: print name of vm
-    debug:
-      msg: "This might be the value of omar variable {{ vmname }}"
+      msg: "This is the vm name {{ vm_name }}
+
