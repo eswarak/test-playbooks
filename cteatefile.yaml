@@ -10,7 +10,7 @@
   - debug: var=omar_var
   #- name: print ip address again
     debug:
-      msg: "This might be the vm id and vm name {{ vmid }} {{ vmname }}"
+      msg: "This might be the vm id {{ vmid }}"
     debug:
       msg: "This might be the vm name {{ vmname }}"
   - name: Ansible create file if it doesn't exist example
