@@ -2,7 +2,7 @@
   tasks:
   - name: check if vmname got passed
     debug:
-      msg: "Passed vm name {{ vmname }}
+      msg: "Passed vm name {{ vmname }}"
   - name: Get the existing vm name
     uri:
       url: "{{ manageiq.api_url }}/api/vms/{{ vmid }}"
